@@ -1,4 +1,4 @@
-export interface IHttpStatusCodeDefinition {
+export interface IHttpStatus {
 	/**
 	 * Deprecation reason, if any.
 	 */
@@ -34,7 +34,12 @@ export interface IHttpStatusCodeDefinition {
 
 export interface ICodeGenerator {
 	/**
+	 * For which framework is this?
+	 */
+	key: keyof IHttpStatus['frameworks']
+
+	/**
 	 * Generates Framework-specific TypeScript Enums
 	 */
-	generateTypeScriptEnum(): string
+	generateTypeScriptEnums(): string
 }

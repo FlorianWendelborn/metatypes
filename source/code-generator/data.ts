@@ -1,6 +1,6 @@
-import { IHttpStatusCodeDefinition } from './types'
+import { IHttpStatus } from './types'
 
-export const statuses: IHttpStatusCodeDefinition[] = [
+export const statuses: IHttpStatus[] = [
 	{
 		frameworks: {
 			djangoRestFramework: 'HTTP_100_CONTINUE',
