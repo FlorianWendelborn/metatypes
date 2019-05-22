@@ -2,6 +2,7 @@ import { IHttpStatus } from './types'
 
 export const statuses: IHttpStatus[] = [
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_100_CONTINUE',
 		},
@@ -12,6 +13,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 100,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_101_SWITCHING_PROTOCOLS',
 		},
@@ -22,8 +24,12 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 101,
 	},
 	{
+		deprecated: {
+			link: new URL('https://tools.ietf.org/html/rfc4918#appendix-F.3'),
+			reason: 'due to lack of implementation',
+		},
 		frameworks: {
-			djangoRestFramework: null, // @TODO: https://github.com/encode/django-rest-framework/pull/6692
+			djangoRestFramework: null,
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc2518#section-10.1'),
@@ -32,6 +38,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 102,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_200_OK',
 		},
@@ -42,6 +49,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 200,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_201_CREATED',
 		},
@@ -52,6 +60,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 201,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_202_ACCEPTED',
 		},
@@ -62,6 +71,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 202,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_203_NON_AUTHORITATIVE_INFORMATION',
 		},
@@ -72,6 +82,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 203,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_204_NO_CONTENT',
 		},
@@ -82,6 +93,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 204,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_205_RESET_CONTENT',
 		},
@@ -92,6 +104,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 205,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_206_PARTIAL_CONTENT',
 		},
@@ -102,6 +115,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 206,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_207_MULTI_STATUS',
 		},
@@ -112,6 +126,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 207,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_300_MULTIPLE_CHOICES',
 		},
@@ -122,6 +137,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 300,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_301_MOVED_PERMANENTLY',
 		},
@@ -132,6 +148,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 301,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_302_FOUND',
 		},
@@ -142,6 +159,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 302,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_303_SEE_OTHER',
 		},
@@ -152,6 +170,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 303,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_304_NOT_MODIFIED',
 		},
@@ -162,8 +181,11 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 304,
 	},
 	{
-		deprecated:
-			'due to security concerns regarding in-band configuration proxies',
+		deprecated: {
+			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.4.5'),
+			reason:
+				'due to security concerns regarding in-band configuration proxies',
+		},
 		frameworks: {
 			djangoRestFramework: 'HTTP_305_USE_PROXY',
 		},
@@ -174,8 +196,11 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 305,
 	},
 	{
-		deprecated:
-			'The 306 status code was defined in a previous version of this specification, is no longer used, and the code is reserved.',
+		deprecated: {
+			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.4.5'),
+			reason:
+				'The 306 status code was defined in a previous version of this specification, is no longer used, and the code is reserved.',
+		},
 		frameworks: {
 			djangoRestFramework: 'HTTP_306_RESERVED',
 		},
@@ -186,6 +211,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 306,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_307_TEMPORARY_REDIRECT',
 		},
@@ -196,6 +222,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 307,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: null, // @TODO: https://github.com/encode/django-rest-framework/pull/6693
 		},
@@ -206,6 +233,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 308,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_400_BAD_REQUEST',
 		},
@@ -216,6 +244,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 400,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_401_UNAUTHORIZED',
 		},
@@ -226,6 +255,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 401,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_402_PAYMENT_REQUIRED',
 		},
@@ -236,6 +266,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 402,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_403_FORBIDDEN',
 		},
@@ -246,6 +277,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 403,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_404_NOT_FOUND',
 		},
@@ -256,6 +288,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 404,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_405_METHOD_NOT_ALLOWED',
 		},
@@ -266,6 +299,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 405,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_406_NOT_ACCEPTABLE',
 		},
@@ -276,6 +310,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 406,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_407_PROXY_AUTHENTICATION_REQUIRED',
 		},
@@ -286,6 +321,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 407,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_408_REQUEST_TIMEOUT',
 		},
@@ -296,6 +332,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 408,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_409_CONFLICT',
 		},
@@ -306,6 +343,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 409,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_410_GONE',
 		},
@@ -316,6 +354,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 410,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_411_LENGTH_REQUIRED',
 		},
@@ -326,6 +365,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 411,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_412_PRECONDITION_FAILED',
 		},
@@ -336,6 +376,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 412,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_413_REQUEST_ENTITY_TOO_LARGE',
 		},
@@ -346,6 +387,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 413,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_414_REQUEST_URI_TOO_LONG',
 		},
@@ -356,6 +398,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 414,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_415_UNSUPPORTED_MEDIA_TYPE',
 		},
@@ -366,6 +409,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 415,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_416_REQUESTED_RANGE_NOT_SATISFIABLE',
 		},
@@ -376,6 +420,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 416,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_417_EXPECTATION_FAILED',
 		},
@@ -386,6 +431,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 417,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: null, // @TODO: https://github.com/encode/django-rest-framework/pull/6694
 		},
@@ -396,6 +442,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 418,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_422_UNPROCESSABLE_ENTITY',
 		},
@@ -406,6 +453,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 422,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_423_LOCKED',
 		},
@@ -416,6 +464,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 423,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_424_FAILED_DEPENDENCY',
 		},
@@ -426,6 +475,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 424,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_428_PRECONDITION_REQUIRED',
 		},
@@ -436,6 +486,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 428,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_429_TOO_MANY_REQUESTS',
 		},
@@ -446,6 +497,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 429,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_431_REQUEST_HEADER_FIELDS_TOO_LARGE',
 		},
@@ -456,6 +508,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 431,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_451_UNAVAILABLE_FOR_LEGAL_REASONS',
 		},
@@ -466,6 +519,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 451,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_500_INTERNAL_SERVER_ERROR',
 		},
@@ -476,6 +530,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 500,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_501_NOT_IMPLEMENTED',
 		},
@@ -486,6 +541,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 501,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_502_BAD_GATEWAY',
 		},
@@ -496,6 +552,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 502,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_503_SERVICE_UNAVAILABLE',
 		},
@@ -506,6 +563,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 503,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_504_GATEWAY_TIMEOUT',
 		},
@@ -516,6 +574,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 504,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_505_HTTP_VERSION_NOT_SUPPORTED',
 		},
@@ -526,6 +585,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 505,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_507_INSUFFICIENT_STORAGE',
 		},
@@ -536,6 +596,7 @@ export const statuses: IHttpStatus[] = [
 		statusCode: 507,
 	},
 	{
+		deprecated: false,
 		frameworks: {
 			djangoRestFramework: 'HTTP_511_NETWORK_AUTHENTICATION_REQUIRED',
 		},

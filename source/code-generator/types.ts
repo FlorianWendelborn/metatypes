@@ -1,8 +1,19 @@
 export interface IHttpStatus {
 	/**
-	 * Deprecation reason, if any.
+	 * Is this status deprecated? If yes, what’s the reason?
 	 */
-	deprecated?: string
+	deprecated:
+		| false
+		| {
+				/**
+				 * Source for the Deprecation
+				 */
+				link: URL
+				/**
+				 * Why was this deprecated?
+				 */
+				reason: string
+		  }
 	/**
 	 * How is this named in various frameworks?
 	 */

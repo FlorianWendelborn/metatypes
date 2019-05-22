@@ -1,5 +1,7 @@
 import { ICodeGenerator, IHttpStatus } from '../types'
 
+const JSDOC_SEPARATOR = '\n\t * '
+
 /**
  * A Base class for a code generator
  */
@@ -34,12 +36,22 @@ export class BaseCodeGenerator implements ICodeGenerator {
 	}
 
 	protected createJSDoc(status: IHttpStatus): string {
-		const lines: string[] = [
+		const deprecated = status.deprecated
+			? `@deprecated [${status.deprecated.reason}]{@link ${
+					status.deprecated.link.href
+			  }}`
+			: null
+
+		const lines = [
 			`${status.rfc.name}`,
-			`@see [RFC]{@link ${status.rfc.link}}\n\t */`,
+			'',
+			deprecated,
+			`@see [RFC]{@link ${status.rfc.link}}`,
 		]
 
-		return `/**\n\t * ${lines.join('\n\t * ')}`
+		return `/**${JSDOC_SEPARATOR}${lines
+			.filter((line) => line !== null)
+			.join(JSDOC_SEPARATOR)}\n\t */`
 	}
 
 	protected getFramework(status: IHttpStatus): string | null {
