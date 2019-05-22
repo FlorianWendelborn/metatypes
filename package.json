@@ -17,5 +17,8 @@
 		"useTabs": true
 	},
 	"repository": "git@github.com:FlorianWendelborn/http-statuses-enum",
+	"scripts": {
+		"build": "tsc"
+	},
 	"version": "1.0.0"
 }
