@@ -1,0 +1,21 @@
+{
+	"author": "Florian Wendelborn <1133858+FlorianWendelborn@users.noreply.github.com>",
+	"devDependencies": {
+		"prettier": "^1.17.1",
+		"tslint": "^5.16.0",
+		"tslint-config-prettier": "^1.18.0",
+		"typescript": "^3.4.5"
+	},
+	"license": "MIT",
+	"main": "index.js",
+	"name": "http-statuses-enum",
+	"prettier": {
+		"arrowParens": "always",
+		"semi": false,
+		"singleQuote": true,
+		"trailingComma": "es5",
+		"useTabs": true
+	},
+	"repository": "git@github.com:FlorianWendelborn/http-statuses-enum",
+	"version": "1.0.0"
+}

@@ -1,0 +1,9 @@
+{
+	"extends": ["tslint:all", "tslint-config-prettier"],
+	"rules": {
+		"file-name-casing": [true, "kebab-case"],
+		"no-console": false,
+		"no-debugger": false,
+		"no-null-keyword": false
+	}
+}
