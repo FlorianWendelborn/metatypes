@@ -504,7 +504,7 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: false, // @TODO: https://github.com/encode/django-rest-framework/pull/6694
+			djangoRestFramework: false,
 			springFramework: 'I_AM_A_TEAPOT',
 		},
 		rfc: {
