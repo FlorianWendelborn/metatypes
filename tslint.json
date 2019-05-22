@@ -1,6 +1,7 @@
 {
 	"extends": ["tslint:all", "tslint-config-prettier"],
 	"rules": {
+		"curly": [true, "as-needed"],
 		"completed-docs": {
 			"options": {
 				"properties": {

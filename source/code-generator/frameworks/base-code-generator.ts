@@ -1,4 +1,4 @@
-import { ICodeGenerator, IHttpStatus } from '../types'
+import { ICodeGenerator, IHttpStatus, FrameworkSupportStatus } from '../types'
 
 const JSDOC_SEPARATOR = '\n\t * '
 
@@ -18,19 +18,28 @@ export class BaseCodeGenerator implements ICodeGenerator {
 	}
 
 	public generateTypeScriptEnums(): string {
-		const entries: string[] = this.filteredStatuses.map((status: IHttpStatus) =>
-			[this.createJSDoc(status), this.createEnum(status)].join('\n\t')
+		const entries: string[] = this.supportedStatuses.map(
+			(status: IHttpStatus) =>
+				[this.createJSDoc(status), this.createEnum(status)].join('\n\t')
 		)
 
 		return `export const enum Statuses {\n\t${entries.join('\n\n\t')}\n}`
 	}
 
-	protected get filteredStatuses(): IHttpStatus[] {
-		return this.statusCodes.filter((status) => this.getFramework(status))
+	protected get supportedStatuses(): IHttpStatus[] {
+		return this.statusCodes.filter(
+			(status) =>
+				this.getFramework(status).status === FrameworkSupportStatus.Supported
+		)
 	}
 
 	protected createEnum(status: IHttpStatus): string {
-		return `${this.getFramework(status)} = ${status.statusCode},`
+		const framework = this.getFramework(status)
+
+		if (!(framework.status === FrameworkSupportStatus.Supported))
+			throw new Error('This Status is Unsupported')
+
+		return `${framework.name} = ${status.statusCode},`
 	}
 
 	protected createJSDoc(status: IHttpStatus): string {
@@ -54,7 +63,7 @@ export class BaseCodeGenerator implements ICodeGenerator {
 		return `/**${JSDOC_SEPARATOR}${lines.join(JSDOC_SEPARATOR)}\n\t */`
 	}
 
-	protected getFramework(status: IHttpStatus): string | false {
+	protected getFramework(status: IHttpStatus) {
 		return status.frameworks[this.key]
 	}
 }

@@ -1,3 +1,19 @@
+export const enum FrameworkSupportStatus {
+	PullRequest = 'pull-request',
+	Rejected = 'rejected',
+	Supported = 'supported',
+	Unknown = 'unknown',
+}
+
+export type IFrameworkSupport =
+	| {
+			name: string
+			status: FrameworkSupportStatus.Supported
+	  }
+	| { status: FrameworkSupportStatus.Unknown }
+	| { status: FrameworkSupportStatus.PullRequest }
+	| { link: URL; reason: string; status: FrameworkSupportStatus.Rejected }
+
 export interface IHttpStatus {
 	/**
 	 * Is this status deprecated? If yes, what’s the reason?
@@ -22,12 +38,12 @@ export interface IHttpStatus {
 		 * How is this called in Django Rest Framework?
 		 * @see {@link https://github.com/encode/django-rest-framework/blob/master/rest_framework/status.py}
 		 */
-		djangoRestFramework: string | false
+		djangoRestFramework: IFrameworkSupport
 		/**
 		 * How is this called in Spring Framework?
 		 * @see {@link https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/http/HttpStatus.html}
 		 */
-		springFramework: string | false
+		springFramework: IFrameworkSupport
 	}
 	/**
 	 * What does the RFC say about it?

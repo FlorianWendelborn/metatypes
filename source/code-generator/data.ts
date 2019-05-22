@@ -1,11 +1,17 @@
-import { IHttpStatus } from './types'
+import { FrameworkSupportStatus, IHttpStatus } from './types'
 
 export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_100_CONTINUE',
-			springFramework: 'CONTINUE',
+			djangoRestFramework: {
+				name: 'HTTP_100_CONTINUE',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'CONTINUE',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.2.1'),
@@ -16,8 +22,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_101_SWITCHING_PROTOCOLS',
-			springFramework: 'SWITCHING_PROTOCOLS',
+			djangoRestFramework: {
+				name: 'HTTP_101_SWITCHING_PROTOCOLS',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'SWITCHING_PROTOCOLS',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.2.2'),
@@ -31,8 +43,18 @@ export const statuses: IHttpStatus[] = [
 			reason: 'due to lack of implementation',
 		},
 		frameworks: {
-			djangoRestFramework: false,
-			springFramework: 'PROCESSING',
+			djangoRestFramework: {
+				link: new URL(
+					'https://github.com/encode/django-rest-framework/pull/6692'
+				),
+				reason:
+					'Closing, as even the WebDAV extension itself has withdrawn it.',
+				status: FrameworkSupportStatus.Rejected,
+			},
+			springFramework: {
+				name: 'PROCESSING',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc2518#section-10.1'),
@@ -43,8 +65,13 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: false,
-			springFramework: 'CHECKPOINT',
+			djangoRestFramework: {
+				status: FrameworkSupportStatus.Unknown,
+			},
+			springFramework: {
+				name: 'CHECKPOINT',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: false,
 		statusCode: 103,
@@ -52,8 +79,11 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_200_OK',
-			springFramework: 'OK',
+			djangoRestFramework: {
+				name: 'HTTP_200_OK',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: { name: 'OK', status: FrameworkSupportStatus.Supported },
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.3.1}'),
@@ -64,8 +94,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_201_CREATED',
-			springFramework: 'CREATED',
+			djangoRestFramework: {
+				name: 'HTTP_201_CREATED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'CREATED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.3.2'),
@@ -76,8 +112,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_202_ACCEPTED',
-			springFramework: 'ACCEPTED',
+			djangoRestFramework: {
+				name: 'HTTP_202_ACCEPTED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'ACCEPTED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.3.3'),
@@ -88,8 +130,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_203_NON_AUTHORITATIVE_INFORMATION',
-			springFramework: 'NON_AUTHORITATIVE_INFORMATION',
+			djangoRestFramework: {
+				name: 'HTTP_203_NON_AUTHORITATIVE_INFORMATION',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'NON_AUTHORITATIVE_INFORMATION',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.3.4'),
@@ -100,8 +148,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_204_NO_CONTENT',
-			springFramework: 'NO_CONTENT',
+			djangoRestFramework: {
+				name: 'HTTP_204_NO_CONTENT',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'NO_CONTENT',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.3.5'),
@@ -112,8 +166,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_205_RESET_CONTENT',
-			springFramework: 'RESET_CONTENT',
+			djangoRestFramework: {
+				name: 'HTTP_205_RESET_CONTENT',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'RESET_CONTENT',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.3.6'),
@@ -124,8 +184,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_206_PARTIAL_CONTENT',
-			springFramework: 'PARTIAL_CONTENT',
+			djangoRestFramework: {
+				name: 'HTTP_206_PARTIAL_CONTENT',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'PARTIAL_CONTENT',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7233#section-4.1'),
@@ -136,8 +202,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_207_MULTI_STATUS',
-			springFramework: 'MULTI_STATUS',
+			djangoRestFramework: {
+				name: 'HTTP_207_MULTI_STATUS',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'MULTI_STATUS',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc2518#section-10.2'),
@@ -148,8 +220,13 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: false,
-			springFramework: 'ALREADY_REPORTED',
+			djangoRestFramework: {
+				status: FrameworkSupportStatus.Unknown,
+			},
+			springFramework: {
+				name: 'ALREADY_REPORTED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc5842#section-7.1'),
@@ -160,8 +237,13 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: false,
-			springFramework: 'IM_USED',
+			djangoRestFramework: {
+				status: FrameworkSupportStatus.Unknown,
+			},
+			springFramework: {
+				name: 'IM_USED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc3229#section-10.4.1'),
@@ -172,8 +254,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_300_MULTIPLE_CHOICES',
-			springFramework: 'MULTIPLE_CHOICES',
+			djangoRestFramework: {
+				name: 'HTTP_300_MULTIPLE_CHOICES',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'MULTIPLE_CHOICES',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.4.1'),
@@ -184,8 +272,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_301_MOVED_PERMANENTLY',
-			springFramework: 'MOVED_PERMANENTLY',
+			djangoRestFramework: {
+				name: 'HTTP_301_MOVED_PERMANENTLY',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'MOVED_PERMANENTLY',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.4.2'),
@@ -196,8 +290,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_302_FOUND',
-			springFramework: 'FOUND',
+			djangoRestFramework: {
+				name: 'HTTP_302_FOUND',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'FOUND',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.4.3'),
@@ -208,8 +308,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_303_SEE_OTHER',
-			springFramework: 'SEE_OTHER',
+			djangoRestFramework: {
+				name: 'HTTP_303_SEE_OTHER',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'SEE_OTHER',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.4.4'),
@@ -220,8 +326,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_304_NOT_MODIFIED',
-			springFramework: 'NOT_MODIFIED',
+			djangoRestFramework: {
+				name: 'HTTP_304_NOT_MODIFIED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'NOT_MODIFIED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7232#section-4.1'),
@@ -236,8 +348,14 @@ export const statuses: IHttpStatus[] = [
 				'due to security concerns regarding in-band configuration of a proxy',
 		},
 		frameworks: {
-			djangoRestFramework: 'HTTP_305_USE_PROXY',
-			springFramework: 'USE_PROXY',
+			djangoRestFramework: {
+				name: 'HTTP_305_USE_PROXY',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'USE_PROXY',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.4.5'),
@@ -252,8 +370,13 @@ export const statuses: IHttpStatus[] = [
 				'The 306 status code was defined in a previous version of this specification, is no longer used, and the code is reserved.',
 		},
 		frameworks: {
-			djangoRestFramework: 'HTTP_306_RESERVED',
-			springFramework: false,
+			djangoRestFramework: {
+				name: 'HTTP_306_RESERVED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				status: FrameworkSupportStatus.Unknown,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.4.5'),
@@ -264,8 +387,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_307_TEMPORARY_REDIRECT',
-			springFramework: 'TEMPORARY_REDIRECT',
+			djangoRestFramework: {
+				name: 'HTTP_307_TEMPORARY_REDIRECT',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'TEMPORARY_REDIRECT',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.4.7'),
@@ -276,8 +405,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_308_PERMANENT_REDIRECT',
-			springFramework: 'PERMANENT_REDIRECT',
+			djangoRestFramework: {
+				name: 'HTTP_308_PERMANENT_REDIRECT',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'PERMANENT_REDIRECT',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7538#section-3'),
@@ -288,8 +423,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_400_BAD_REQUEST',
-			springFramework: 'BAD_REQUEST',
+			djangoRestFramework: {
+				name: 'HTTP_400_BAD_REQUEST',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'BAD_REQUEST',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.5.1'),
@@ -300,8 +441,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_401_UNAUTHORIZED',
-			springFramework: 'UNAUTHORIZED',
+			djangoRestFramework: {
+				name: 'HTTP_401_UNAUTHORIZED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'UNAUTHORIZED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7235#section-3.1'),
@@ -312,8 +459,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_402_PAYMENT_REQUIRED',
-			springFramework: 'PAYMENT_REQUIRED',
+			djangoRestFramework: {
+				name: 'HTTP_402_PAYMENT_REQUIRED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'PAYMENT_REQUIRED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.5.2'),
@@ -324,8 +477,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_403_FORBIDDEN',
-			springFramework: 'FORBIDDEN',
+			djangoRestFramework: {
+				name: 'HTTP_403_FORBIDDEN',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'FORBIDDEN',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.5.3'),
@@ -336,8 +495,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_404_NOT_FOUND',
-			springFramework: 'NOT_FOUND',
+			djangoRestFramework: {
+				name: 'HTTP_404_NOT_FOUND',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'NOT_FOUND',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.5.4'),
@@ -348,8 +513,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_405_METHOD_NOT_ALLOWED',
-			springFramework: 'METHOD_NOT_ALLOWED',
+			djangoRestFramework: {
+				name: 'HTTP_405_METHOD_NOT_ALLOWED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'METHOD_NOT_ALLOWED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.5.5'),
@@ -360,8 +531,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_406_NOT_ACCEPTABLE',
-			springFramework: 'NOT_ACCEPTABLE',
+			djangoRestFramework: {
+				name: 'HTTP_406_NOT_ACCEPTABLE',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'NOT_ACCEPTABLE',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.5.6'),
@@ -372,8 +549,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_407_PROXY_AUTHENTICATION_REQUIRED',
-			springFramework: 'PROXY_AUTHENTICATION_REQUIRED',
+			djangoRestFramework: {
+				name: 'HTTP_407_PROXY_AUTHENTICATION_REQUIRED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'PROXY_AUTHENTICATION_REQUIRED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7235#section-3.2'),
@@ -384,8 +567,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_408_REQUEST_TIMEOUT',
-			springFramework: 'REQUEST_TIMEOUT',
+			djangoRestFramework: {
+				name: 'HTTP_408_REQUEST_TIMEOUT',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'REQUEST_TIMEOUT',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.5.7'),
@@ -396,8 +585,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_409_CONFLICT',
-			springFramework: 'CONFLICT',
+			djangoRestFramework: {
+				name: 'HTTP_409_CONFLICT',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'CONFLICT',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.5.8'),
@@ -408,8 +603,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_410_GONE',
-			springFramework: 'GONE',
+			djangoRestFramework: {
+				name: 'HTTP_410_GONE',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'GONE',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.5.9'),
@@ -420,8 +621,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_411_LENGTH_REQUIRED',
-			springFramework: 'LENGTH_REQUIRED',
+			djangoRestFramework: {
+				name: 'HTTP_411_LENGTH_REQUIRED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'LENGTH_REQUIRED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.5.10'),
@@ -432,8 +639,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_412_PRECONDITION_FAILED',
-			springFramework: 'PRECONDITION_FAILED',
+			djangoRestFramework: {
+				name: 'HTTP_412_PRECONDITION_FAILED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'PRECONDITION_FAILED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7232#section-4.2'),
@@ -444,8 +657,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_413_REQUEST_ENTITY_TOO_LARGE',
-			springFramework: 'PAYLOAD_TOO_LARGE',
+			djangoRestFramework: {
+				name: 'HTTP_413_REQUEST_ENTITY_TOO_LARGE',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'PAYLOAD_TOO_LARGE',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.5.11'),
@@ -456,8 +675,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_414_REQUEST_URI_TOO_LONG',
-			springFramework: 'URI_TOO_LONG',
+			djangoRestFramework: {
+				name: 'HTTP_414_REQUEST_URI_TOO_LONG',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'URI_TOO_LONG',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.5.12'),
@@ -468,8 +693,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_415_UNSUPPORTED_MEDIA_TYPE',
-			springFramework: 'UNSUPPORTED_MEDIA_TYPE',
+			djangoRestFramework: {
+				name: 'HTTP_415_UNSUPPORTED_MEDIA_TYPE',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'UNSUPPORTED_MEDIA_TYPE',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.5.13'),
@@ -480,8 +711,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_416_REQUESTED_RANGE_NOT_SATISFIABLE',
-			springFramework: 'REQUESTED_RANGE_NOT_SATISFIABLE',
+			djangoRestFramework: {
+				name: 'HTTP_416_REQUESTED_RANGE_NOT_SATISFIABLE',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'REQUESTED_RANGE_NOT_SATISFIABLE',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7233#section-4.4'),
@@ -492,8 +729,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_417_EXPECTATION_FAILED',
-			springFramework: 'EXPECTATION_FAILED',
+			djangoRestFramework: {
+				name: 'HTTP_417_EXPECTATION_FAILED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'EXPECTATION_FAILED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.5.14'),
@@ -504,8 +747,17 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: false,
-			springFramework: 'I_AM_A_TEAPOT',
+			djangoRestFramework: {
+				link: new URL(
+					'https://github.com/encode/django-rest-framework/pull/6694'
+				),
+				reason: "There isn't really any practical reason for adding it.",
+				status: FrameworkSupportStatus.Rejected,
+			},
+			springFramework: {
+				name: 'I_AM_A_TEAPOT',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc2324#section-2.3.2'),
@@ -516,8 +768,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_422_UNPROCESSABLE_ENTITY',
-			springFramework: 'UNPROCESSABLE_ENTITY',
+			djangoRestFramework: {
+				name: 'HTTP_422_UNPROCESSABLE_ENTITY',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'UNPROCESSABLE_ENTITY',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc2518#section-10.3'),
@@ -528,8 +786,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_423_LOCKED',
-			springFramework: 'LOCKED',
+			djangoRestFramework: {
+				name: 'HTTP_423_LOCKED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'LOCKED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc2518#section-10.4'),
@@ -540,8 +804,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_424_FAILED_DEPENDENCY',
-			springFramework: 'FAILED_DEPENDENCY',
+			djangoRestFramework: {
+				name: 'HTTP_424_FAILED_DEPENDENCY',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'FAILED_DEPENDENCY',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc2518#section-10.5'),
@@ -552,8 +822,13 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: false,
-			springFramework: 'UPGRADE_REQUIRED',
+			djangoRestFramework: {
+				status: FrameworkSupportStatus.Unknown,
+			},
+			springFramework: {
+				name: 'UPGRADE_REQUIRED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc2817#section-6'),
@@ -564,8 +839,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_428_PRECONDITION_REQUIRED',
-			springFramework: 'PRECONDITION_REQUIRED',
+			djangoRestFramework: {
+				name: 'HTTP_428_PRECONDITION_REQUIRED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'PRECONDITION_REQUIRED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc6585#section-3'),
@@ -576,8 +857,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_429_TOO_MANY_REQUESTS',
-			springFramework: 'TOO_MANY_REQUESTS',
+			djangoRestFramework: {
+				name: 'HTTP_429_TOO_MANY_REQUESTS',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'TOO_MANY_REQUESTS',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc6585#section-4'),
@@ -588,8 +875,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_431_REQUEST_HEADER_FIELDS_TOO_LARGE',
-			springFramework: 'REQUEST_HEADER_FIELDS_TOO_LARGE',
+			djangoRestFramework: {
+				name: 'HTTP_431_REQUEST_HEADER_FIELDS_TOO_LARGE',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'REQUEST_HEADER_FIELDS_TOO_LARGE',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc6585#section-5'),
@@ -600,8 +893,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_451_UNAVAILABLE_FOR_LEGAL_REASONS',
-			springFramework: 'UNAVAILABLE_FOR_LEGAL_REASONS',
+			djangoRestFramework: {
+				name: 'HTTP_451_UNAVAILABLE_FOR_LEGAL_REASONS',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'UNAVAILABLE_FOR_LEGAL_REASONS',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7725#section-3'),
@@ -612,8 +911,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_500_INTERNAL_SERVER_ERROR',
-			springFramework: 'INTERNAL_SERVER_ERROR',
+			djangoRestFramework: {
+				name: 'HTTP_500_INTERNAL_SERVER_ERROR',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'INTERNAL_SERVER_ERROR',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.6.1'),
@@ -624,8 +929,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_501_NOT_IMPLEMENTED',
-			springFramework: 'NOT_IMPLEMENTED',
+			djangoRestFramework: {
+				name: 'HTTP_501_NOT_IMPLEMENTED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'NOT_IMPLEMENTED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.6.2'),
@@ -636,8 +947,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_502_BAD_GATEWAY',
-			springFramework: 'BAD_GATEWAY',
+			djangoRestFramework: {
+				name: 'HTTP_502_BAD_GATEWAY',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'BAD_GATEWAY',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.6.3'),
@@ -648,8 +965,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_503_SERVICE_UNAVAILABLE',
-			springFramework: 'SERVICE_UNAVAILABLE',
+			djangoRestFramework: {
+				name: 'HTTP_503_SERVICE_UNAVAILABLE',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'SERVICE_UNAVAILABLE',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.6.4'),
@@ -660,8 +983,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_504_GATEWAY_TIMEOUT',
-			springFramework: 'GATEWAY_TIMEOUT',
+			djangoRestFramework: {
+				name: 'HTTP_504_GATEWAY_TIMEOUT',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'GATEWAY_TIMEOUT',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.6.5'),
@@ -672,8 +1001,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_505_HTTP_VERSION_NOT_SUPPORTED',
-			springFramework: 'HTTP_VERSION_NOT_SUPPORTED',
+			djangoRestFramework: {
+				name: 'HTTP_505_HTTP_VERSION_NOT_SUPPORTED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'HTTP_VERSION_NOT_SUPPORTED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.6.6'),
@@ -684,8 +1019,13 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: false,
-			springFramework: 'VARIANT_ALSO_NEGOTIATES',
+			djangoRestFramework: {
+				status: FrameworkSupportStatus.Unknown,
+			},
+			springFramework: {
+				name: 'VARIANT_ALSO_NEGOTIATES',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc2295#section-8.1'),
@@ -696,8 +1036,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_507_INSUFFICIENT_STORAGE',
-			springFramework: 'INSUFFICIENT_STORAGE',
+			djangoRestFramework: {
+				name: 'HTTP_507_INSUFFICIENT_STORAGE',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'INSUFFICIENT_STORAGE',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc2518#section-10.6'),
@@ -708,8 +1054,13 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: false,
-			springFramework: 'LOOP_DETECTED',
+			djangoRestFramework: {
+				status: FrameworkSupportStatus.Unknown,
+			},
+			springFramework: {
+				name: 'LOOP_DETECTED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc5842#section-7.2'),
@@ -720,8 +1071,13 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: false,
-			springFramework: 'BANDWIDTH_LIMIT_EXCEEDED',
+			djangoRestFramework: {
+				status: FrameworkSupportStatus.Unknown,
+			},
+			springFramework: {
+				name: 'BANDWIDTH_LIMIT_EXCEEDED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: false,
 		statusCode: 509,
@@ -729,8 +1085,13 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: false,
-			springFramework: 'NOT_EXTENDED',
+			djangoRestFramework: {
+				status: FrameworkSupportStatus.Unknown,
+			},
+			springFramework: {
+				name: 'NOT_EXTENDED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc2774#section-7'),
@@ -741,8 +1102,14 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: 'HTTP_511_NETWORK_AUTHENTICATION_REQUIRED',
-			springFramework: 'NETWORK_AUTHENTICATION_REQUIRED',
+			djangoRestFramework: {
+				name: 'HTTP_511_NETWORK_AUTHENTICATION_REQUIRED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'NETWORK_AUTHENTICATION_REQUIRED',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc6585#section-6'),
