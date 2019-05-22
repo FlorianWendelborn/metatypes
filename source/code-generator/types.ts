@@ -11,7 +11,7 @@ export type IFrameworkSupport =
 			status: FrameworkSupportStatus.Supported
 	  }
 	| { status: FrameworkSupportStatus.Unknown }
-	| { status: FrameworkSupportStatus.PullRequest }
+	| { link: URL; status: FrameworkSupportStatus.PullRequest }
 	| { link: URL; reason: string; status: FrameworkSupportStatus.Rejected }
 
 export interface IHttpStatus {

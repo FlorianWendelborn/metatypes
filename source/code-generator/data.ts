@@ -78,7 +78,10 @@ export const statuses: IHttpStatus[] = [
 		deprecated: false,
 		frameworks: {
 			djangoRestFramework: {
-				status: FrameworkSupportStatus.Unknown,
+				link: new URL(
+					'https://github.com/encode/django-rest-framework/pull/6706'
+				),
+				status: FrameworkSupportStatus.PullRequest,
 			},
 			nodeJs: {
 				name: 'Early Hints',
@@ -89,7 +92,10 @@ export const statuses: IHttpStatus[] = [
 				status: FrameworkSupportStatus.Supported,
 			},
 		},
-		rfc: false,
+		rfc: {
+			link: new URL('https://tools.ietf.org/html/rfc8297#section-2'),
+			name: 'Early Hints',
+		},
 		statusCode: 103,
 	},
 	{
@@ -272,7 +278,10 @@ export const statuses: IHttpStatus[] = [
 		deprecated: false,
 		frameworks: {
 			djangoRestFramework: {
-				status: FrameworkSupportStatus.Unknown,
+				link: new URL(
+					'https://github.com/encode/django-rest-framework/pull/6706'
+				),
+				status: FrameworkSupportStatus.PullRequest,
 			},
 			nodeJs: {
 				name: 'Already Reported',
@@ -293,7 +302,10 @@ export const statuses: IHttpStatus[] = [
 		deprecated: false,
 		frameworks: {
 			djangoRestFramework: {
-				status: FrameworkSupportStatus.Unknown,
+				link: new URL(
+					'https://github.com/encode/django-rest-framework/pull/6706'
+				),
+				status: FrameworkSupportStatus.PullRequest,
 			},
 			nodeJs: {
 				name: 'IM Used',
@@ -915,7 +927,7 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				link: new URL(
-					'https://github.com/encode/django-rest-framework/pull/6694'
+					'https://github.com/encode/django-rest-framework/pull/6706'
 				),
 				reason: "There isn't really any practical reason for adding it.",
 				status: FrameworkSupportStatus.Rejected,
@@ -939,7 +951,10 @@ export const statuses: IHttpStatus[] = [
 		deprecated: false,
 		frameworks: {
 			djangoRestFramework: {
-				status: FrameworkSupportStatus.Unknown,
+				link: new URL(
+					'https://github.com/encode/django-rest-framework/pull/6706'
+				),
+				status: FrameworkSupportStatus.PullRequest,
 			},
 			nodeJs: {
 				name: 'Misdirected Request',
@@ -949,7 +964,10 @@ export const statuses: IHttpStatus[] = [
 				status: FrameworkSupportStatus.Unknown,
 			},
 		},
-		rfc: false,
+		rfc: {
+			link: new URL('https://tools.ietf.org/html/rfc7540#section-9.1.2'),
+			name: 'Misdirected Request',
+		},
 		statusCode: 421,
 	},
 	{
@@ -1022,7 +1040,10 @@ export const statuses: IHttpStatus[] = [
 		deprecated: false,
 		frameworks: {
 			djangoRestFramework: {
-				status: FrameworkSupportStatus.Unknown,
+				link: new URL(
+					'https://github.com/encode/django-rest-framework/pull/6706'
+				),
+				status: FrameworkSupportStatus.PullRequest,
 			},
 			nodeJs: {
 				name: 'Upgrade Required',
@@ -1263,7 +1284,10 @@ export const statuses: IHttpStatus[] = [
 		deprecated: false,
 		frameworks: {
 			djangoRestFramework: {
-				status: FrameworkSupportStatus.Unknown,
+				link: new URL(
+					'https://github.com/encode/django-rest-framework/pull/6706'
+				),
+				status: FrameworkSupportStatus.PullRequest,
 			},
 			nodeJs: {
 				name: 'Variant Also Negotiates',
@@ -1306,7 +1330,10 @@ export const statuses: IHttpStatus[] = [
 		deprecated: false,
 		frameworks: {
 			djangoRestFramework: {
-				status: FrameworkSupportStatus.Unknown,
+				link: new URL(
+					'https://github.com/encode/django-rest-framework/pull/6706'
+				),
+				status: FrameworkSupportStatus.PullRequest,
 			},
 			nodeJs: {
 				name: 'Loop Detected',
@@ -1327,7 +1354,10 @@ export const statuses: IHttpStatus[] = [
 		deprecated: false,
 		frameworks: {
 			djangoRestFramework: {
-				status: FrameworkSupportStatus.Unknown,
+				link: new URL(
+					'https://github.com/encode/django-rest-framework/pull/6706'
+				),
+				status: FrameworkSupportStatus.PullRequest,
 			},
 			nodeJs: {
 				name: 'Bandwidth Limit Exceeded',
@@ -1345,7 +1375,10 @@ export const statuses: IHttpStatus[] = [
 		deprecated: false,
 		frameworks: {
 			djangoRestFramework: {
-				status: FrameworkSupportStatus.Unknown,
+				link: new URL(
+					'https://github.com/encode/django-rest-framework/pull/6706'
+				),
+				status: FrameworkSupportStatus.PullRequest,
 			},
 			nodeJs: {
 				name: 'Not Extended',
