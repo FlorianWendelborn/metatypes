@@ -7,6 +7,7 @@ Complete, well-documented HTTP Status Code definitions for TypeScript Projects.
 Currently, the following frameworks are supported:
 
 - [Django Rest Framework](https://github.com/encode/django-rest-framework)
+- [Spring Framework](https://spring.io)
 
 If you’d like to add another one, feel free to submit a pull request or create an issue.
 

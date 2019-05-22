@@ -26,9 +26,7 @@ export class BaseCodeGenerator implements ICodeGenerator {
 	}
 
 	protected get filteredStatuses(): IHttpStatus[] {
-		return this.statusCodes.filter(
-			(status) => this.getFramework(status) !== null
-		)
+		return this.statusCodes.filter((status) => this.getFramework(status))
 	}
 
 	protected createEnum(status: IHttpStatus): string {
@@ -36,25 +34,27 @@ export class BaseCodeGenerator implements ICodeGenerator {
 	}
 
 	protected createJSDoc(status: IHttpStatus): string {
-		const deprecated = status.deprecated
-			? `@deprecated [${status.deprecated.reason}]{@link ${
-					status.deprecated.link.href
-			  }}`
-			: null
+		const values = {
+			deprecated: status.deprecated
+				? `@deprecated [${status.deprecated.reason}]{@link ${
+						status.deprecated.link.href
+				  }}`
+				: null,
+			linkToRFC: status.rfc ? `@see [RFC]{@link ${status.rfc.link}}` : null,
+			officialName: status.rfc ? status.rfc.name : null,
+		}
 
 		const lines = [
-			`${status.rfc.name}`,
+			values.officialName,
 			'',
-			deprecated,
-			`@see [RFC]{@link ${status.rfc.link}}`,
-		]
+			values.deprecated,
+			values.linkToRFC,
+		].filter((line) => line !== null)
 
-		return `/**${JSDOC_SEPARATOR}${lines
-			.filter((line) => line !== null)
-			.join(JSDOC_SEPARATOR)}\n\t */`
+		return `/**${JSDOC_SEPARATOR}${lines.join(JSDOC_SEPARATOR)}\n\t */`
 	}
 
-	protected getFramework(status: IHttpStatus): string | null {
+	protected getFramework(status: IHttpStatus): string | false {
 		return status.frameworks[this.key]
 	}
 }

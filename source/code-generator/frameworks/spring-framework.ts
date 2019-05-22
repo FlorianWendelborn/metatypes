@@ -6,10 +6,10 @@ import { BaseCodeGenerator } from './base-code-generator'
 /**
  * Code Generator for Django-Rest-Framework
  */
-export class DjangoRestFrameworkGenerator extends BaseCodeGenerator
+export class SpringFrameworkGenerator extends BaseCodeGenerator
 	implements ICodeGenerator {
-	public readonly key = 'djangoRestFramework'
+	public readonly key = 'springFramework'
 }
 
-const instance = new DjangoRestFrameworkGenerator(statuses)
+const instance = new SpringFrameworkGenerator(statuses)
 console.log(instance.generateTypeScriptEnums())
