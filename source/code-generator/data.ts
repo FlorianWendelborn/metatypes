@@ -276,7 +276,7 @@ export const statuses: IHttpStatus[] = [
 	{
 		deprecated: false,
 		frameworks: {
-			djangoRestFramework: false, // @TODO: https://github.com/encode/django-rest-framework/pull/6693
+			djangoRestFramework: 'HTTP_308_PERMANENT_REDIRECT',
 			springFramework: 'PERMANENT_REDIRECT',
 		},
 		rfc: {
