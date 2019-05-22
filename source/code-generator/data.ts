@@ -8,6 +8,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_100_CONTINUE',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Continue',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'CONTINUE',
 				status: FrameworkSupportStatus.Supported,
@@ -24,6 +28,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_101_SWITCHING_PROTOCOLS',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Switching Protocols',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -51,6 +59,10 @@ export const statuses: IHttpStatus[] = [
 					'Closing, as even the WebDAV extension itself has withdrawn it.',
 				status: FrameworkSupportStatus.Rejected,
 			},
+			nodeJs: {
+				name: 'Processing',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'PROCESSING',
 				status: FrameworkSupportStatus.Supported,
@@ -68,6 +80,10 @@ export const statuses: IHttpStatus[] = [
 			djangoRestFramework: {
 				status: FrameworkSupportStatus.Unknown,
 			},
+			nodeJs: {
+				name: 'Early Hints',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'CHECKPOINT',
 				status: FrameworkSupportStatus.Supported,
@@ -83,7 +99,14 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_200_OK',
 				status: FrameworkSupportStatus.Supported,
 			},
-			springFramework: { name: 'OK', status: FrameworkSupportStatus.Supported },
+			nodeJs: {
+				name: 'OK',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				name: 'OK',
+				status: FrameworkSupportStatus.Supported,
+			},
 		},
 		rfc: {
 			link: new URL('https://tools.ietf.org/html/rfc7231#section-6.3.1}'),
@@ -96,6 +119,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_201_CREATED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Created',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -116,6 +143,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_202_ACCEPTED',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Accepted',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'ACCEPTED',
 				status: FrameworkSupportStatus.Supported,
@@ -132,6 +163,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_203_NON_AUTHORITATIVE_INFORMATION',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Non-Authoritative Information',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -152,6 +187,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_204_NO_CONTENT',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'No Content',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'NO_CONTENT',
 				status: FrameworkSupportStatus.Supported,
@@ -168,6 +207,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_205_RESET_CONTENT',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Reset Content',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -188,6 +231,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_206_PARTIAL_CONTENT',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Partial Content',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'PARTIAL_CONTENT',
 				status: FrameworkSupportStatus.Supported,
@@ -204,6 +251,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_207_MULTI_STATUS',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Multi-Status',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -223,6 +274,10 @@ export const statuses: IHttpStatus[] = [
 			djangoRestFramework: {
 				status: FrameworkSupportStatus.Unknown,
 			},
+			nodeJs: {
+				name: 'Already Reported',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'ALREADY_REPORTED',
 				status: FrameworkSupportStatus.Supported,
@@ -240,6 +295,10 @@ export const statuses: IHttpStatus[] = [
 			djangoRestFramework: {
 				status: FrameworkSupportStatus.Unknown,
 			},
+			nodeJs: {
+				name: 'IM Used',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'IM_USED',
 				status: FrameworkSupportStatus.Supported,
@@ -256,6 +315,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_300_MULTIPLE_CHOICES',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Multiple Choices',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -276,6 +339,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_301_MOVED_PERMANENTLY',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Moved Permanently',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'MOVED_PERMANENTLY',
 				status: FrameworkSupportStatus.Supported,
@@ -292,6 +359,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_302_FOUND',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Found',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -312,6 +383,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_303_SEE_OTHER',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'See Other',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'SEE_OTHER',
 				status: FrameworkSupportStatus.Supported,
@@ -328,6 +403,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_304_NOT_MODIFIED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Not Modified',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -352,6 +431,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_305_USE_PROXY',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Use Proxy',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'USE_PROXY',
 				status: FrameworkSupportStatus.Supported,
@@ -374,6 +457,9 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_306_RESERVED',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				status: FrameworkSupportStatus.Unknown,
+			},
 			springFramework: {
 				status: FrameworkSupportStatus.Unknown,
 			},
@@ -389,6 +475,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_307_TEMPORARY_REDIRECT',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Temporary Redirect',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -409,6 +499,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_308_PERMANENT_REDIRECT',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Permanent Redirect',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'PERMANENT_REDIRECT',
 				status: FrameworkSupportStatus.Supported,
@@ -425,6 +519,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_400_BAD_REQUEST',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Bad Request',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -445,6 +543,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_401_UNAUTHORIZED',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Unauthorized',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'UNAUTHORIZED',
 				status: FrameworkSupportStatus.Supported,
@@ -461,6 +563,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_402_PAYMENT_REQUIRED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Payment Required',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -481,6 +587,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_403_FORBIDDEN',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Forbidden',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'FORBIDDEN',
 				status: FrameworkSupportStatus.Supported,
@@ -497,6 +607,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_404_NOT_FOUND',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Not Found',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -517,6 +631,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_405_METHOD_NOT_ALLOWED',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Method Not Allowed',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'METHOD_NOT_ALLOWED',
 				status: FrameworkSupportStatus.Supported,
@@ -533,6 +651,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_406_NOT_ACCEPTABLE',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Not Acceptable',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -553,6 +675,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_407_PROXY_AUTHENTICATION_REQUIRED',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Proxy Authentication Required',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'PROXY_AUTHENTICATION_REQUIRED',
 				status: FrameworkSupportStatus.Supported,
@@ -569,6 +695,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_408_REQUEST_TIMEOUT',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Request Timeout',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -589,6 +719,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_409_CONFLICT',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Conflict',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'CONFLICT',
 				status: FrameworkSupportStatus.Supported,
@@ -605,6 +739,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_410_GONE',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Gone',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -625,6 +763,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_411_LENGTH_REQUIRED',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Length Required',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'LENGTH_REQUIRED',
 				status: FrameworkSupportStatus.Supported,
@@ -641,6 +783,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_412_PRECONDITION_FAILED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Precondition Failed',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -661,6 +807,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_413_REQUEST_ENTITY_TOO_LARGE',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Payload Too Large',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'PAYLOAD_TOO_LARGE',
 				status: FrameworkSupportStatus.Supported,
@@ -677,6 +827,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_414_REQUEST_URI_TOO_LONG',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'URI Too Long',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -697,6 +851,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_415_UNSUPPORTED_MEDIA_TYPE',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Unsupported Media Type',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'UNSUPPORTED_MEDIA_TYPE',
 				status: FrameworkSupportStatus.Supported,
@@ -715,6 +873,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_416_REQUESTED_RANGE_NOT_SATISFIABLE',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Range Not Satisfiable',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'REQUESTED_RANGE_NOT_SATISFIABLE',
 				status: FrameworkSupportStatus.Supported,
@@ -731,6 +893,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_417_EXPECTATION_FAILED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Expectation Failed',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -754,6 +920,10 @@ export const statuses: IHttpStatus[] = [
 				reason: "There isn't really any practical reason for adding it.",
 				status: FrameworkSupportStatus.Rejected,
 			},
+			nodeJs: {
+				name: "I'm a Teapot",
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'I_AM_A_TEAPOT',
 				status: FrameworkSupportStatus.Supported,
@@ -769,7 +939,28 @@ export const statuses: IHttpStatus[] = [
 		deprecated: false,
 		frameworks: {
 			djangoRestFramework: {
+				status: FrameworkSupportStatus.Unknown,
+			},
+			nodeJs: {
+				name: 'Misdirected Request',
+				status: FrameworkSupportStatus.Supported,
+			},
+			springFramework: {
+				status: FrameworkSupportStatus.Unknown,
+			},
+		},
+		rfc: false,
+		statusCode: 421,
+	},
+	{
+		deprecated: false,
+		frameworks: {
+			djangoRestFramework: {
 				name: 'HTTP_422_UNPROCESSABLE_ENTITY',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Unprocessable Entity',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -790,6 +981,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_423_LOCKED',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Locked',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'LOCKED',
 				status: FrameworkSupportStatus.Supported,
@@ -806,6 +1001,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_424_FAILED_DEPENDENCY',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Failed Dependency',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -825,6 +1024,10 @@ export const statuses: IHttpStatus[] = [
 			djangoRestFramework: {
 				status: FrameworkSupportStatus.Unknown,
 			},
+			nodeJs: {
+				name: 'Upgrade Required',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'UPGRADE_REQUIRED',
 				status: FrameworkSupportStatus.Supported,
@@ -841,6 +1044,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_428_PRECONDITION_REQUIRED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Precondition Required',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -861,6 +1068,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_429_TOO_MANY_REQUESTS',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Too Many Requests',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'TOO_MANY_REQUESTS',
 				status: FrameworkSupportStatus.Supported,
@@ -877,6 +1088,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_431_REQUEST_HEADER_FIELDS_TOO_LARGE',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Request Header Fields Too Large',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -897,6 +1112,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_451_UNAVAILABLE_FOR_LEGAL_REASONS',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Unavailable For Legal Reasons',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'UNAVAILABLE_FOR_LEGAL_REASONS',
 				status: FrameworkSupportStatus.Supported,
@@ -913,6 +1132,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_500_INTERNAL_SERVER_ERROR',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Internal Server Error',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -933,6 +1156,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_501_NOT_IMPLEMENTED',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Not Implemented',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'NOT_IMPLEMENTED',
 				status: FrameworkSupportStatus.Supported,
@@ -949,6 +1176,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_502_BAD_GATEWAY',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Bad Gateway',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -969,6 +1200,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_503_SERVICE_UNAVAILABLE',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Service Unavailable',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'SERVICE_UNAVAILABLE',
 				status: FrameworkSupportStatus.Supported,
@@ -985,6 +1220,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_504_GATEWAY_TIMEOUT',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Gateway Timeout',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
@@ -1005,6 +1244,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_505_HTTP_VERSION_NOT_SUPPORTED',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'HTTP Version Not Supported',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'HTTP_VERSION_NOT_SUPPORTED',
 				status: FrameworkSupportStatus.Supported,
@@ -1021,6 +1264,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				status: FrameworkSupportStatus.Unknown,
+			},
+			nodeJs: {
+				name: 'Variant Also Negotiates',
+				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
 				name: 'VARIANT_ALSO_NEGOTIATES',
@@ -1040,6 +1287,10 @@ export const statuses: IHttpStatus[] = [
 				name: 'HTTP_507_INSUFFICIENT_STORAGE',
 				status: FrameworkSupportStatus.Supported,
 			},
+			nodeJs: {
+				name: 'Insufficient Storage',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'INSUFFICIENT_STORAGE',
 				status: FrameworkSupportStatus.Supported,
@@ -1056,6 +1307,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				status: FrameworkSupportStatus.Unknown,
+			},
+			nodeJs: {
+				name: 'Loop Detected',
+				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
 				name: 'LOOP_DETECTED',
@@ -1074,6 +1329,10 @@ export const statuses: IHttpStatus[] = [
 			djangoRestFramework: {
 				status: FrameworkSupportStatus.Unknown,
 			},
+			nodeJs: {
+				name: 'Bandwidth Limit Exceeded',
+				status: FrameworkSupportStatus.Supported,
+			},
 			springFramework: {
 				name: 'BANDWIDTH_LIMIT_EXCEEDED',
 				status: FrameworkSupportStatus.Supported,
@@ -1087,6 +1346,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				status: FrameworkSupportStatus.Unknown,
+			},
+			nodeJs: {
+				name: 'Not Extended',
+				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {
 				name: 'NOT_EXTENDED',
@@ -1104,6 +1367,10 @@ export const statuses: IHttpStatus[] = [
 		frameworks: {
 			djangoRestFramework: {
 				name: 'HTTP_511_NETWORK_AUTHENTICATION_REQUIRED',
+				status: FrameworkSupportStatus.Supported,
+			},
+			nodeJs: {
+				name: 'Network Authentication Required',
 				status: FrameworkSupportStatus.Supported,
 			},
 			springFramework: {

@@ -40,6 +40,11 @@ export interface IHttpStatus {
 		 */
 		djangoRestFramework: IFrameworkSupport
 		/**
+		 * How is this called in Node.js?
+		 * @see {@link https://nodejs.org/api/http.html#http_http_status_codes}
+		 */
+		nodeJs: IFrameworkSupport
+		/**
 		 * How is this called in Spring Framework?
 		 * @see {@link https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/http/HttpStatus.html}
 		 */
