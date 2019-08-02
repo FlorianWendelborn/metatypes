@@ -13,6 +13,7 @@
 		"no-console": false,
 		"no-debugger": false,
 		"no-null-keyword": false,
+		"max-file-line-count": false,
 		"prefer-function-over-method": false,
 		"typedef": false
 	}

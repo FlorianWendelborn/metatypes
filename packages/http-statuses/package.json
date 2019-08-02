@@ -9,11 +9,11 @@
 		"ts-node": "^8.3.0"
 	},
 	"directories": {
-		"lib": "lib",
+		"build": "build",
 		"test": "__tests__"
 	},
 	"files": [
-		"lib"
+		"build"
 	],
 	"homepage": "https://github.com/FlorianWendelborn/metatypes/",
 	"keywords": [

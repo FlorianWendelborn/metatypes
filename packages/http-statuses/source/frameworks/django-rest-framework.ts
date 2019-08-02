@@ -7,6 +7,6 @@ import { BaseCodeGenerator } from './base-code-generator'
  */
 export class DjangoRestFrameworkGenerator extends BaseCodeGenerator
 	implements ICodeGenerator {
+	public readonly enumName = 'DrfStatuses'
 	public readonly key = 'djangoRestFramework'
-	public readonly enumName = 'DRFStatuses'
 }

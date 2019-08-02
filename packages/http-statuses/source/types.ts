@@ -32,6 +32,12 @@ export interface IHttpStatus {
 				 */
 				reason: string
 		  }
+
+	/**
+	 * Precise, and Human-Readable Explanation
+	 */
+	description: string | null
+
 	/**
 	 * How is this named in various frameworks?
 	 */
@@ -41,17 +47,26 @@ export interface IHttpStatus {
 		 * @see {@link https://github.com/encode/django-rest-framework/blob/master/rest_framework/status.py}
 		 */
 		djangoRestFramework: IFrameworkSupport
+
+		/**
+		 * How is this called in @metatypes/http-statuses?
+		 * @see {@link https://github.com/FlorianWendelborn/metatypes}
+		 */
+		metatypes: IFrameworkSupport
+
 		/**
 		 * How is this called in Node.js?
 		 * @see {@link https://nodejs.org/api/http.html#http_http_status_codes}
 		 */
 		nodeJs: IFrameworkSupport
+
 		/**
 		 * How is this called in Spring Framework?
 		 * @see {@link https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/http/HttpStatus.html}
 		 */
 		springFramework: IFrameworkSupport
 	}
+
 	/**
 	 * What does the RFC say about it?
 	 */
@@ -62,15 +77,22 @@ export interface IHttpStatus {
 				 * Link to most recent RFC
 				 */
 				link: URL
+
 				/**
 				 * How is this status called according to the RFC?
 				 */
 				name: string
 		  }
+
 	/**
 	 * The Numeric HTTP Status Code
 	 */
 	statusCode: number
+
+	/**
+	 * Short, and Human-Readable Explanation
+	 */
+	summary: string
 }
 
 export interface ICodeGenerator {

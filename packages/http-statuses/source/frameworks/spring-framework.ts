@@ -7,6 +7,6 @@ import { BaseCodeGenerator } from './base-code-generator'
  */
 export class SpringFrameworkGenerator extends BaseCodeGenerator
 	implements ICodeGenerator {
-	public readonly key = 'springFramework'
 	public readonly enumName = 'SpringStatuses'
+	public readonly key = 'springFramework'
 }
