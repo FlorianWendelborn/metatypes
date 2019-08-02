@@ -28,6 +28,10 @@
 	"license": "MIT",
 	"main": "build/index.js",
 	"name": "@metatypes/http-statuses",
+	"private": false,
+	"publishConfig": {
+		"access": "public"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/FlorianWendelborn/metatypes.git"
