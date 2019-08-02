@@ -32,6 +32,8 @@ If you’d like to add another framework, feel free to submit a pull request or 
 
 ### [Django Rest Framework](https://github.com/encode/django-rest-framework)
 
+This is pretty much the same as the default `Statuses` enum, but status codes that aren’t supported by DRF are removed.
+
 ```typescript
 import { DRFStatuses } from '@metatypes/http-statuses'
 
