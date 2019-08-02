@@ -1,4 +1,3 @@
-import { statuses } from '../data'
 import { ICodeGenerator } from '../types'
 
 import { BaseCodeGenerator } from './base-code-generator'
@@ -9,7 +8,5 @@ import { BaseCodeGenerator } from './base-code-generator'
 export class DjangoRestFrameworkGenerator extends BaseCodeGenerator
 	implements ICodeGenerator {
 	public readonly key = 'djangoRestFramework'
+	public readonly enumName = 'DRFStatuses'
 }
-
-const instance = new DjangoRestFrameworkGenerator(statuses)
-console.log(instance.generateTypeScriptEnums())

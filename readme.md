@@ -1,17 +1,11 @@
-# http-statuses-enum
+# Metatypes
 
-Complete, well-documented HTTP Status Code definitions for TypeScript Projects.
+Complete, well-documented Metadata definitions for TypeScript Projects.
 
-## Supported Frameworks
+## Development Setup
 
-Currently, the following frameworks are supported:
-
-- [Django Rest Framework](https://github.com/encode/django-rest-framework)
-- [Node.js](https://nodejs.org)
-- [Spring Framework](https://spring.io)
-
-If you’d like to add another one, feel free to submit a pull request or create an issue.
-
-## Special Mentions
-
-Inspired by https://github.com/prettymuchbryce/http-status-codes
+```bash
+yarn config set workspaces-experimental true
+yarn install
+yarn lerna bootstrap
+```

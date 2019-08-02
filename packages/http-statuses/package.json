@@ -1,0 +1,40 @@
+{
+	"author": "Florian Wendelborn <1133858+FlorianWendelborn@users.noreply.github.com>",
+	"bugs": {
+		"url": "https://github.com/FlorianWendelborn/metatypes/issues"
+	},
+	"dependencies": {},
+	"description": "Well-Documented HTTP Status Code Enums",
+	"devDependencies": {
+		"ts-node": "^8.3.0"
+	},
+	"directories": {
+		"lib": "lib",
+		"test": "__tests__"
+	},
+	"files": [
+		"lib"
+	],
+	"homepage": "https://github.com/FlorianWendelborn/metatypes/",
+	"keywords": [
+		"metadata",
+		"http",
+		"status-codes",
+		"statuscode",
+		"status",
+		"code",
+		"https"
+	],
+	"license": "MIT",
+	"main": "lib/http-statuses.js",
+	"name": "@metatypes/http-statuses",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/FlorianWendelborn/metatypes.git"
+	},
+	"scripts": {
+		"build": "rm -rf build generated/*.ts && ts-node source/generate.ts && tsc",
+		"test": "echo \"Error: run tests from root\" && exit 1"
+	},
+	"version": "0.0.0"
+}

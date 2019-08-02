@@ -6,11 +6,11 @@ const JSDOC_SEPARATOR = '\n\t * '
  * A Base class for a code generator
  */
 export class BaseCodeGenerator implements ICodeGenerator {
+	// metadata
 	public readonly key!: keyof IHttpStatus['frameworks']
+	public readonly enumName!: string
 
-	/**
-	 * List of HTTP Status Codes
-	 */
+	// data
 	public readonly statusCodes: IHttpStatus[]
 
 	public constructor(statusCodes: IHttpStatus[]) {
@@ -23,7 +23,9 @@ export class BaseCodeGenerator implements ICodeGenerator {
 				[this.createJSDoc(status), this.createEnum(status)].join('\n\t')
 		)
 
-		return `export const enum Statuses {\n\t${entries.join('\n\n\t')}\n}`
+		return `export const enum ${this.enumName} {\n\t${entries.join(
+			'\n\n\t'
+		)}\n}`
 	}
 
 	protected get supportedStatuses(): IHttpStatus[] {
@@ -39,15 +41,19 @@ export class BaseCodeGenerator implements ICodeGenerator {
 		if (!(framework.status === FrameworkSupportStatus.Supported))
 			throw new Error('This Status is Unsupported')
 
-		return `${framework.name} = ${status.statusCode},`
+		const enumKey = framework.name
+			// 0-9 aren’t allowed at beginning of string
+			.replace(/$[^a-zA-Z_]*/, '')
+			// only keep allowed characters
+			.replace(/[^_a-zA-Z0-9]/g, '')
+
+		return `${enumKey} = ${status.statusCode},`
 	}
 
 	protected createJSDoc(status: IHttpStatus): string {
 		const values = {
 			deprecated: status.deprecated
-				? `@deprecated [${status.deprecated.reason}]{@link ${
-						status.deprecated.link.href
-				  }}`
+				? `@deprecated [${status.deprecated.reason}]{@link ${status.deprecated.link.href}}`
 				: null,
 			linkToRFC: status.rfc ? `@see [RFC]{@link ${status.rfc.link}}` : null,
 			officialName: status.rfc ? status.rfc.name : null,

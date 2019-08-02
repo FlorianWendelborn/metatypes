@@ -1,4 +1,3 @@
-import { statuses } from '../data'
 import { ICodeGenerator } from '../types'
 
 import { BaseCodeGenerator } from './base-code-generator'
@@ -9,7 +8,5 @@ import { BaseCodeGenerator } from './base-code-generator'
 export class SpringFrameworkGenerator extends BaseCodeGenerator
 	implements ICodeGenerator {
 	public readonly key = 'springFramework'
+	public readonly enumName = 'SpringStatuses'
 }
-
-const instance = new SpringFrameworkGenerator(statuses)
-console.log(instance.generateTypeScriptEnums())

@@ -1,15 +1,18 @@
 {
 	"compilerOptions": {
 		"declaration": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
 		"forceConsistentCasingInFileNames": true,
+		"lib": ["es6"],
 		"module": "commonjs",
 		"noImplicitAny": true,
+		"noLib": false,
 		"noUnusedLocals": true,
-		"outDir": "./build",
+		"sourceMap": true,
 		"strict": true,
 		"strictNullChecks": true,
-		"target": "es5"
+		"target": "es6"
 	},
-	"exclude": ["source/**/*.test.ts"],
-	"include": ["source/**/*.ts"]
+	"exclude": ["node_modules", "**/*.spec.ts"]
 }

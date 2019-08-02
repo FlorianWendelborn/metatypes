@@ -1,3 +1,5 @@
+import { URL } from 'url'
+
 export const enum FrameworkSupportStatus {
 	PullRequest = 'pull-request',
 	Rejected = 'rejected',
