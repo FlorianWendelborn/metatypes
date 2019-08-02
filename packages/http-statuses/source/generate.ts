@@ -7,8 +7,10 @@ import { NodeJsGenerator } from './frameworks/node-js'
 import { SpringFrameworkGenerator } from './frameworks/spring-framework'
 
 const generators = [
-	new DjangoRestFrameworkGenerator(statuses),
 	new MetatypesGenerator(statuses),
+
+	// Should be sorted:
+	new DjangoRestFrameworkGenerator(statuses),
 	new NodeJsGenerator(statuses),
 	new SpringFrameworkGenerator(statuses),
 ]
