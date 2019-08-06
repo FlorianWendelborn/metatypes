@@ -1,3 +1,5 @@
+import { URL } from 'url'
+
 import { FrameworkSupportStatus, ICodeGenerator, IHttpStatus } from '../types'
 
 const JSDOC_SEPARATOR = '\n\t * '
@@ -5,10 +7,12 @@ const JSDOC_SEPARATOR = '\n\t * '
 /**
  * A Base class for a code generator
  */
-export class BaseCodeGenerator implements ICodeGenerator {
+export abstract class BaseCodeGenerator implements ICodeGenerator {
 	// Metadata
-	public readonly enumName!: string
-	public readonly key!: keyof IHttpStatus['frameworks']
+	public abstract readonly enumName: string
+	public abstract readonly frameworkName: string
+	public abstract readonly key: keyof IHttpStatus['frameworks']
+	public abstract readonly referenceUrl: URL
 
 	// Data
 	public readonly statusCodes: IHttpStatus[]
@@ -23,9 +27,15 @@ export class BaseCodeGenerator implements ICodeGenerator {
 				[this.createJSDoc(status), this.createEnum(status)].join('\n\t')
 		)
 
-		return `export const enum ${this.enumName} {\n\t${entries.join(
-			'\n\n\t'
-		)}\n}`
+		return [
+			'/**',
+			` * HTTP Status Codes as defined by ${this.frameworkName}`,
+			` * @see {@link ${this.referenceUrl.href}}`,
+			' */',
+			`export const enum ${this.enumName} {`,
+			entries.map((entry) => `\t${entry}`).join('\n\n'),
+			'}',
+		].join('\n')
 	}
 
 	protected get supportedStatuses(): IHttpStatus[] {

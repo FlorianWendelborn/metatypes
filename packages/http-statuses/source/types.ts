@@ -97,9 +97,24 @@ export interface IHttpStatus {
 
 export interface ICodeGenerator {
 	/**
+	 * What should be the name of the generated enum?
+	 */
+	enumName: string
+
+	/**
+	 * What’s the Human-Readable Name of the Framework?
+	 */
+	frameworkName: string
+
+	/**
 	 * For which framework is this?
 	 */
 	key: keyof IHttpStatus['frameworks']
+
+	/**
+	 * Link to the framework’s http status code list
+	 */
+	referenceUrl: URL
 
 	/**
 	 * Generates Framework-specific TypeScript Enums

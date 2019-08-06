@@ -1,3 +1,7 @@
+/**
+ * HTTP Status Codes as defined by @metatypes/http-statuses
+ * @see {@link https://github.com/FlorianWendelborn/metatypes/tree/master/packages/http-statuses}
+ */
 export const enum Statuses {
 	/**
 	 * Continue
@@ -505,6 +509,10 @@ export const enum Statuses {
 	HTTP_511_NETWORK_AUTHENTICATION_REQUIRED = 511,
 }
 
+/**
+ * HTTP Status Codes as defined by Django Rest Framework
+ * @see {@link https://github.com/encode/django-rest-framework/blob/master/rest_framework/status.py}
+ */
 export const enum DrfStatuses {
 	/**
 	 * Continue
@@ -979,6 +987,10 @@ export const enum DrfStatuses {
 	HTTP_511_NETWORK_AUTHENTICATION_REQUIRED = 511,
 }
 
+/**
+ * HTTP Status Codes as defined by Node.js
+ * @see {@link https://github.com/nodejs/node/blob/d7d321b071789f08c65dbb11a0e4b3b6a299af44/lib/_http_server.js#L70}
+ */
 export const enum NodeJsStatuses {
 	/**
 	 * Continue
@@ -1477,6 +1489,10 @@ export const enum NodeJsStatuses {
 	NetworkAuthenticationRequired = 511,
 }
 
+/**
+ * HTTP Status Codes as defined by Spring Framework
+ * @see {@link https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/http/HttpStatus.html}
+ */
 export const enum SpringStatuses {
 	/**
 	 * Continue
