@@ -20,7 +20,10 @@ const run = async () => {
 		generators.map(async (generator) => generator.generateTypeScriptEnums())
 	)
 
-	fs.writeFile(`${__dirname}/../generated/index.ts`, results.join('\n\n'))
+	fs.writeFile(
+		`${__dirname}/../generated/index.ts`,
+		`${results.join('\n\n')}\n`
+	)
 }
 
 run()
