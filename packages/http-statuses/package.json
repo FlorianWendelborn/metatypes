@@ -16,13 +16,16 @@
 	],
 	"homepage": "https://github.com/FlorianWendelborn/metatypes/tree/master/packages/http-statuses",
 	"keywords": [
-		"metadata",
-		"http",
-		"status-codes",
-		"statuscode",
-		"status",
 		"code",
-		"https"
+		"codes",
+		"enum",
+		"http",
+		"https",
+		"metadata",
+		"status-codes",
+		"status",
+		"statuscode",
+		"typescript"
 	],
 	"license": "MIT",
 	"main": "build/index.js",
