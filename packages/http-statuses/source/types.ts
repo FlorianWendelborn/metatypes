@@ -1,6 +1,6 @@
 import { URL } from 'url'
 
-export const enum FrameworkSupportStatus {
+export enum FrameworkSupportStatus {
 	PullRequest = 'pull-request',
 	Rejected = 'rejected',
 	Supported = 'supported',

@@ -32,7 +32,7 @@ export abstract class BaseCodeGenerator implements ICodeGenerator {
 			` * HTTP Status Codes as defined by ${this.frameworkName}`,
 			` * @see {@link ${this.referenceUrl.href}}`,
 			' */',
-			`export const enum ${this.enumName} {`,
+			`export enum ${this.enumName} {`,
 			entries.map((entry) => `\t${entry}`).join('\n\n'),
 			'}',
 		].join('\n')
