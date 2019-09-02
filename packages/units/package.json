@@ -3,7 +3,7 @@
 	"bugs": {
 		"url": "https://github.com/FlorianWendelborn/metatypes/issues"
 	},
-	"description": "Well-Documented HTTP Status Code Enums",
+	"description": "Magic Numbers for Unit Conversion",
 	"devDependencies": {
 		"ts-node": "^8.3.0"
 	},
@@ -13,34 +13,36 @@
 	"files": [
 		"build"
 	],
-	"homepage": "https://github.com/FlorianWendelborn/metatypes/tree/master/packages/http-statuses",
+	"homepage": "https://github.com/@FlorianWendelborn/metatypes",
 	"keywords": [
-		"code",
-		"codes",
-		"enum",
-		"http",
-		"https",
-		"metadata",
-		"status-codes",
-		"status",
-		"statuscode",
-		"typescript"
+		"binary",
+		"si",
+		"iec",
+		"bits",
+		"bytes",
+		"conversion",
+		"unit",
+		"convert",
+		"magic",
+		"numbers",
+		"magic",
+		"number"
 	],
 	"license": "MIT",
 	"main": "build/index.js",
-	"name": "@metatypes/http-statuses",
+	"name": "@metatypes/units",
 	"private": false,
 	"publishConfig": {
 		"access": "public"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/FlorianWendelborn/metatypes.git"
+		"url": "git+https://FlorianWendelborn@github.com/FlorianWendelborn/metatypes.git"
 	},
 	"scripts": {
-		"build": "rm -rf build generated/*.ts && ts-node source/generate.ts && tsc",
+		"build": "rm -rf build && tsc",
 		"test": "echo \"Error: run tests from root\" && exit 1"
 	},
 	"types": "build/index.d.ts",
-	"version": "0.1.2"
+	"version": "0.0.0"
 }
