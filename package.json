@@ -18,7 +18,7 @@
 	"private": true,
 	"scripts": {
 		"build": "lerna run build",
-		"publish": "lerna run build && lerna publish"
+		"prepublishOnly": "yarn run build"
 	},
 	"workspaces": [
 		"packages/*"

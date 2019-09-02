@@ -4,6 +4,8 @@
 
 ## Usage
 
+### BinaryPrefixes
+
 ```ts
 import { BinaryPrefixes } from '@metatypes/units'
 
