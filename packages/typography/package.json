@@ -1,0 +1,43 @@
+{
+	"author": "Florian Wendelborn <1133858+FlorianWendelborn@users.noreply.github.com>",
+	"bugs": {
+		"url": "https://github.com/FlorianWendelborn/metatypes/issues"
+	},
+	"description": "Magic Characters for Typography",
+	"devDependencies": {
+		"ts-node": "^8.3.0"
+	},
+	"directories": {
+		"build": "build"
+	},
+	"files": [
+		"build"
+	],
+	"homepage": "https://github.com/@FlorianWendelborn/metatypes",
+	"keywords": [
+		"em-dash",
+		"en-dash",
+		"figure-dash",
+		"horizontal-bar",
+		"quotation-dash",
+		"swung-dash",
+		"typography"
+	],
+	"license": "MIT",
+	"main": "build/index.js",
+	"name": "@metatypes/typography",
+	"private": false,
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://FlorianWendelborn@github.com/FlorianWendelborn/metatypes.git"
+	},
+	"scripts": {
+		"build": "rm -rf build && tsc",
+		"test": "echo \"Error: run tests from root\" && exit 1"
+	},
+	"types": "build/index.d.ts",
+	"version": "0.3.0"
+}
