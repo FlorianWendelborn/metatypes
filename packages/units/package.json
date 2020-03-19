@@ -5,7 +5,7 @@
 	},
 	"description": "Magic Numbers for Unit Conversion",
 	"devDependencies": {
-		"ts-node": "^8.3.0"
+		"ts-node": "^8.7.0"
 	},
 	"directories": {
 		"build": "build"
